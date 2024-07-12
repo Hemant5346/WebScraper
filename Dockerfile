@@ -19,6 +19,8 @@ USER appuser
 # Build the application (adjust if you use a different build command)
 RUN npm run build  # Or: RUN yarn build
 
+RUN npm install --save-dev webpack 
+
 # Create a new image for serving the application (from a minimal Node.js image)
 FROM node:18-alpine AS runner
 
