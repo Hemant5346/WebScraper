@@ -2,7 +2,7 @@
 FROM node:16-alpine
 
 # Change the working directory on the Docker image to /app
-WORKDIR 
+WORKDIR /app
 
 # Copy package.json and package-lock.json to the /app directory
 COPY package.json package-lock.json ./
@@ -10,11 +10,11 @@ COPY package.json package-lock.json ./
 # Install dependencies
 RUN npm install
 
-# Copy the rest of project files into this image
+# Copy the rest of project files into the /app directory
 COPY . .
 
 # Expose application port
-EXPOSE 3000
+EXPOSE 8000
 
 # Start the application
-CMD npm start
+CMD ["npm", "start"]
