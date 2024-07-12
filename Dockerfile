@@ -2,7 +2,7 @@
 FROM node:16-alpine
 
 # Change the working directory on the Docker image to /app
-WORKDIR /app
+WORKDIR /WebScraper
 
 # Copy package.json and package-lock.json to the /app directory
 COPY package.json package-lock.json ./
